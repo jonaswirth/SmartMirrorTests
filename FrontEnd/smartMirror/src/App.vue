@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <GridRow />
-    <GridRow />
+    <GridRow :isCommunicationRow="true" />
     <GridRow />
   </div>
 </template>
