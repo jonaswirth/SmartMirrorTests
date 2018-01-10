@@ -3,9 +3,7 @@
     <GridRow />
     <GridRow :isCommunicationRow="true" />
     <GridRow />
-    <div class="test-controlls">
-        <button>Say something</button>
-    </div>
+    <TestControlls />
   </div>
 </template>
 
@@ -14,10 +12,12 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 
 import GridRow from './components/gridRow.vue';
+import TestControlls from './components/testControlls.vue';
 
 @Component({
   components:{
-    GridRow
+    GridRow,
+    TestControlls
   }
 })
 export default class App extends Vue {
@@ -42,9 +42,5 @@ html, body{
   height: 90%;
   padding:0;
   margin:0;
-}
-div.test-controlls{
-  border: 1px solid white;
-  height: 10%;
 }
 </style>

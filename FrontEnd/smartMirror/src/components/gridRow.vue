@@ -26,7 +26,7 @@ export default class GridRow extends Vue {
   @Prop()
   public isCommunicationRow:boolean;
 
-  private communicationActive:boolean = true;
+  private communicationActive:boolean = false;
   private message:string = "Hello";
 }
 </script>
