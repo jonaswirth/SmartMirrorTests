@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <div class="grid-row">
-      <div class="grid-box"></div>
-      <div class="grid-box"></div>
-      <div class="grid-box"></div>
-    </div>
+    <GridRow />
+    <GridRow />
+    <GridRow />
   </div>
 </template>
 
@@ -12,14 +10,24 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-@Component
+import GridRow from './components/gridRow.vue';
+
+@Component({
+  components:{
+    GridRow
+  }
+})
 export default class App extends Vue {
 }
 </script>
 
 <style>
-body{
+html, body{
   background-color: black;
+  width: 100%;
+  height: 100%;
+  padding:0;
+  margin:0;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -28,6 +36,9 @@ body{
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  height: 100%;
+  padding:0;
+  margin:0;
 }
 
 h1, h2 {
